@@ -108,9 +108,7 @@ function Dashboard() {
                 {user.fullName}
               </span>
             </h1>
-            <h1 className="text-blue-800 mt-3 ">
-              Phone Number:<span>{}</span>
-            </h1>
+            
             <h1 className="text-blue-800 mt-3 ">
               Email:
               <span className="text-yellow-500 font-semibold">
@@ -118,9 +116,7 @@ function Dashboard() {
                 {user.email}
               </span>
             </h1>
-            <h1 className="text-blue-800 mt-3 ">
-              Gender:<span className="text-yellow-500 font-semibold">{}</span>
-            </h1>
+            
           </div>
           <div className="col-span-1 ">
             <img src={logo} className="w-32" alt="" />
