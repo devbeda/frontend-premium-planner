@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .Lic-Button {
+        @apply transition-all duration-300 rounded-3xl text-black  outline-none outline-Lic-Blue active:text-white  active:bg-Lic-Blue hover:text-black hover:bg-Lic-Yellow ;
+    }
+}
