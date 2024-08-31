@@ -1,9 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Nunito:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Moderustic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;400&family=Moderustic&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+
+
 @layer components {
     .Lic-Button {
-        @apply transition-all duration-300 rounded-3xl text-black  outline-none outline-Lic-Blue active:text-white  active:bg-Lic-Blue hover:text-black hover:bg-Lic-Yellow ;
+        @apply transition-all font-button-Text duration-300 rounded-3xl text-black  outline-none outline-Lic-Blue active:text-white  active:bg-Lic-Blue hover:text-black hover:bg-Lic-Yellow ;
     }
 }
