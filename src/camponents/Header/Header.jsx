@@ -14,7 +14,7 @@ export default function Header() {
         <img src={logo} className='w-full '/>
       </div>
       <div className=' w-[90%] flex justify-center'>
-      <p className=' text-white font-semibold text-2xl md:text-3xl'>
+      <p className='font-button-Text text-white font-semibold text-2xl md:text-3xl'>
         Premium Calculator
        </p>
       </div>
