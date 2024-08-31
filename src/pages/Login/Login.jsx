@@ -12,11 +12,11 @@ function Login() {
     formState: { errors },
   } = useForm();
   const [error, setError] = useState("");
+  const [loging, setloging] = useState("")
 
   const submit = async (data) => {
     const userInfo = {
       username: data.username,
-
       password: data.password,
     };
 
@@ -25,6 +25,7 @@ function Login() {
         `${baseUrl}/user/login`,
         userInfo
       );
+      setloging("Loading...")
 
       if (response.data) {
         localStorage.setItem("accessToken", response.data.accessToken);
@@ -55,33 +56,40 @@ function Login() {
         className="w-auto sm:w-[400px] h-auto  rounded-xl outline outline-blue-800">
         <form onSubmit={handleSubmit(submit)}>
           <div className="flex justify-center items-center h-[10%] border border-b-blue-800">
-            <h1 className=" text-xl font-semibold text-black py-1 ">Log in</h1>
+            <h1 className=" text-xl  font-Heading-Text text-black py-1 ">Log in</h1>
           </div>
           <div className="flex justify-center items-center">
-            {error && <p className="text-red-500">{error}</p>}
+            {error && <p className="text-red-500 font-all-Text">{error}</p>}
           </div>
           <div className="w-full h-2/6 px-5 py-3 ">
             <div className="">
-              <h2 className="text-black font-semibold ">Username:-</h2>
+              <h2 className="text-black font-SideHeading-Text font-medium  ">Username:-</h2>
               <input
                 type="text"
-                className="outline-none rounded-2xl py-0.5 px-2 text-md  outline-Lic-Blue"
+                className="outline-none rounded-2xl py-0.5 px-2 text-md  font-all-Text  outline-Lic-Blue"
                 {...register("username", { required: true })}
               />
             </div>
             <div className="">
-              <h2 className="text-black font-semibold">Password:-</h2>
+              <h2 className="text-black font-SideHeading-Text ">Password:-</h2>
               <input
                 type="password"
-                className="outline-none rounded-2xl py-0.5 px-2 text-md  outline-Lic-Blue"
+                className="outline-none rounded-2xl py-0.5 px-2 text-md font-all-Text  outline-Lic-Blue"
                 {...register("password", { required: true })}
               />
             </div>
           </div>
+          
           <div className="h-1/6 flex justify-center items-center">
-            <button className="Lic-Button px-2.5">Log in</button>
+            {
+              loging? (
+                <p className="text-center font-SideHeading-Text text-blue-800">Loading...</p>
+              ) : (
+                <button className="Lic-Button px-2.5">Log in</button>
+              )
+            }
           </div>
-          <div className="h-1/6 py-2 px-2">
+          <div className="h-1/6 py-2 px-2 font-all-Text">
             <p>
               If you don't have any account,
               <Link
