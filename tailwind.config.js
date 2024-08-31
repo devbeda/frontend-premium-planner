@@ -13,6 +13,12 @@ export default {
       outlineColor:{
         "Lic-Yellow":"#f9d74b",
         "Lic-Blue":"#00417c"
+      },
+      fontFamily:{
+        "button-Text":["Montserrat", "sans-serif"],
+        "SideHeading-Text": ["Nunito", "sans-serif"],
+        "all-Text":["Moderustic", "sans-serif"],
+        "Heading-Text": ["Kanit", "sans-serif"]
       }
     },
   },
