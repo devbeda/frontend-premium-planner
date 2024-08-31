@@ -77,7 +77,7 @@ function Dashboard() {
   if (error) {
     return <div className="text-red-500">{error}</div>;
   }
-  if (!user) return <div>Loading...</div>;
+  if (!user) return <div className="w-screen h-[90vh] flex justify-center items-center font-Heading-Text font-semibold text-2xl ">Loading...</div>;
   
 
   return (
@@ -88,22 +88,22 @@ function Dashboard() {
       transition={{duration:0.7}}
       className=" col-span-3 h-[500px] outline outline-Lic-Blue rounded-lg">
         <div className="w-full border border-b-[#00417c] px-3 py-2">
-          <h1 className="text-lg font-semibold text-blue-800">
+          <h1 className="text-lg  font-Heading-Text text-blue-800">
             Agent's Profile :-
           </h1>
         </div>
         <div className="grid grid-cols-4 justify-center items-center px-2">
-          <div className="col-span-3 ">
-            <h1 className="text-blue-800 mt-3 ">
+          <div className="col-span-3  ">
+            <h1 className="text-blue-800 mt-3 font-SideHeading-Text">
               Username:
-              <span className="text-yellow-500 font-semibold ">
+              <span className="text-yellow-500 font-all-Text font-semibold ">
                 {" "}
                 {user.username}
               </span>
             </h1>
-            <h1 className="text-blue-800 mt-3 ">
+            <h1 className="text-blue-800 mt-3 font-SideHeading-Text">
               Full Name:
-              <span className="text-yellow-500 font-semibold">
+              <span className="text-yellow-500 font-all-Text font-semibold">
                 {" "}
                 {user.fullName}
               </span>
@@ -111,7 +111,7 @@ function Dashboard() {
             
             <h1 className="text-blue-800 mt-3 ">
               Email:
-              <span className="text-yellow-500 font-semibold">
+              <span className="text-yellow-500 font-all-Text font-semibold">
                 {" "}
                 {user.email}
               </span>
@@ -141,7 +141,7 @@ function Dashboard() {
       transition={{duration:0.5}}
       className="px-2 w-full col-span-2 outline outline-[#00417c] rounded-md">
         <div className="w-full  px-3 py-2">
-          <h2 className="text-lg font-semibold text-blue-800">Services</h2>
+          <h2 className="text-lg  text-blue-800 font-Heading-Text">Services</h2>
         </div>
         <div className="h-[1px] w-full bg-Lic-Blue"></div>
         <div className="w-full text-center items-center justify-center flex flex-col gap-3  py-4 ">
