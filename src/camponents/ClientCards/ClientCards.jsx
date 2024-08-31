@@ -49,9 +49,9 @@ function ClientCards({ client, onDelete }) {
       >
         <div
           onClick={()=>setClick(!click)}
-          className=" w-full rounded-lg  outline-none outline-Lic-Blue   group  hover:bg-Lic-Yellow hover:scale-105 transition-all duration-300 hover:text-black"
+          className=" w-full rounded-lg  outline-none outline-Lic-Blue   group  hover:bg-Lic-Yellow hover:scale-105  transition-all duration-300 hover:text-black"
         >
-          <div className="flex justify-between items-center px-2 py-1">
+          <div className="flex justify-between items-center px-2 py-1 font-all-Text">
             <p className="text-gray-400 group-hover:text-black text-[10px] sm:text-[10px] md:[14px]">
               Created: {formattedDate}
             </p>
@@ -59,34 +59,34 @@ function ClientCards({ client, onDelete }) {
               {client.isActive ? (
                 <div className="flex justify-end items-center gap-1 text-gray-400 text-sm ">
                   <div className="bg-green-400 h-2 w-2 rounded-full"></div>
-                  <div className=" text-[13px] md:text-base group-hover:text-black md:text-[14px] ">
+                  <div className=" text-[11px] md:text-base group-hover:text-black md:text-[14px] ">
                     Actived
                   </div>
                 </div>
               ) : (
                 <div className="flex justify-end items-center gap-1 text-gray-400 text-sm ">
                   <div className="bg-gray-400 h-2 w-2 rounded-full"></div>
-                  <div className="text-[13px] group-hover:text-black md:text-[14px] ">
+                  <div className="text-[11px] group-hover:text-black md:text-[14px] ">
                     Drafted
                   </div>
                 </div>
               )}
             </div>
           </div>
-          <div className="px-2 pb-2">
-            <h1 className="text-left text-sm font-semibold tracking-wide">
+          <div className="px-2 pb-2 font-all-Text">
+            <h1 className="text-left text-sm font-semibold tracking-wide font-button-Text">
               {client.fullName}
             </h1>
-            <h2 className="text-left text-[13px] font-light tracking-wide">
-              Targeting Price: {client.targetingPrice}
+            <h2 className="text-left text-[11px] md:text-sm font-light tracking-wide">
+              Tar. Price: {client.targetingPrice}
             </h2>
-            <h2 className="text-left text-[13px] font-light tracking-wide">
+            <h2 className="text-left text-[11px] md:text-sm font-light tracking-wide">
               Premium per Year: {client.clientPayPerYear}Rs
             </h2>
-            <h2 className="text-left text-[13px] font-light">
+            <h2 className="text-left text-[11px] md:text-sm font-light">
               Premium Period : {client.payingYearByClient}yr
             </h2>
-            <h2 className="text-left text-[13px] font-light">
+            <h2 className="text-left text-[11px] md:text-sm font-light">
               maturity :{" "}
               {client.payingYearByClient + client.payingYearByCompany}
               yr
