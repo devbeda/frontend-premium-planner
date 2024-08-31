@@ -48,89 +48,89 @@ function Signup() {
         transition={{duration:1}}
         className=" md:w-[400px] h-auto  rounded-xl outline outline-blue-800 pb-4">
           <div className="flex justify-center items-center h-[10%] border border-b-blue-800">
-            <h2 className=" text-xl font-semibold text-black py-1 ">Sign up</h2>
+            <h2 className=" text-xl  text-black py-1 font-Heading-Text ">Sign up</h2>
           </div>
           <div className="w-full flex flex-col gap-1 h-2/6 px-5 py-5 ">
             <div className="">
-              <h2 className="text-black mb-1">Agent's Full Name:-</h2>
+              <h2 className="text-black mb-1 font-SideHeading-Text">Agent's Full Name:-</h2>
               <input
                 type="text"
-                className="outline-none rounded-2xl py-0.5 px-2 text-md  outline-Lic-Blue"
+                className="outline-none rounded-2xl py-0.5 px-2 text-md font-all-Text outline-Lic-Blue"
                 {...register("fullName", { required: true })}
               />
               <div>
               {errors.fullName && (
-                    <span className="text-[12px]  text-red-500 sm:text-base">
+                    <span className="text-[12px] font-button-Text text-red-500 sm:text-sm">
                       Enter your Fullname
                     </span>
                   )}
               </div>
             </div>
             <div className="">
-              <h2 className="text-black mb-1">Agent's Username:-</h2>
+              <h2 className="text-black mb-1 font-SideHeading-Text">Agent's Username:-</h2>
               <input
                 type="text"
-                className="outline-none rounded-2xl py-0.5 px-2 text-md  outline-Lic-Blue"
+                className="outline-none rounded-2xl font-all-Text py-0.5 px-2 text-md  outline-Lic-Blue"
                 {...register("username", { required: true })}
               />
 
               <div>
               {errors.username && (
-                    <span className="text-[12px]  text-red-500 sm:text-base">
+                    <span className="text-[12px] font-button-Text text-red-500 sm:text-sm">
                       Enter your username
                     </span>
                   )}
               </div>
             </div>
             <div className="">
-              <h2 className="text-black mb-1">Email:-</h2>
+              <h2 className="text-black mb-1 font-SideHeading-Text">Email:-</h2>
               <input
                 type="email"
-                className="outline-none rounded-2xl py-0.5 px-2 text-md  outline-Lic-Blue"
+                className="outline-none rounded-2xl py-0.5 px-2 text-md font-all-Text outline-Lic-Blue"
                 {...register("email", { required: true })}
               />
               <div>
               {errors.email && (
-                    <span className="text-[12px]  text-red-500 sm:text-base">
+                    <span className="text-[12px] font-button-Text  text-red-500 sm:text-sm">
                       Enter your Email
                     </span>
                   )}
               </div>
             </div>
             <div className="">
-              <h2 className="text-black mb-1">Password:-</h2>
+              <h2 className="text-black mb-1 font-SideHeading-Text">Password:-</h2>
               <input
                 type="password"
-                className="outline-none rounded-2xl py-0.5 px-2 text-md  outline-Lic-Blue"
+                className="outline-none rounded-2xl font-all-Text py-0.5 px-2 text-md  outline-Lic-Blue"
                 {...register("password", { required: true })}
               />
               <div>
               {errors.password && (
-                    <span className="text-[12px]  text-red-500 sm:text-base">
+                    <span className="text-[12px] font-button-Text text-red-500 sm:text-sm">
                       Enter your Password
                     </span>
                   )}
               </div>
             </div>
             <div className="">
-              <h2 className="text-black mb-1">Confirm Password:-</h2>
+              <h2 className="text-black mb-1 font-SideHeading-Text">Confirm Password:-</h2>
               <input
                 type="password"
-                className="outline-none rounded-2xl py-0.5 px-2 text-md  outline-Lic-Blue"
+                className="outline-none rounded-2xl py-0.5 px-2 text-md font-all-Text outline-Lic-Blue"
                 {...register("cPassword", { required: true })}
               />
             </div>
           </div>
-          <div className="flex justify-center items-center mb-1">
-            {error && <p className="text-red-500">{error}</p>}
+          <div className="flex justify-center items-center font-button-Text mb-1">
+            {error && <p className="text-red-500 font-all-Text">{error}</p>}
             
           </div>
           <div className="h-1/6 flex flex-col justify-center items-center">
             <button className="Lic-Button px-2 py-1">
               Sign up
             </button>
-            <p className="text-black mb-1">
-              Already have an account? <NavLink to="/" className="font-semibold hover:font-bold text-blue-600">Login</NavLink>
+            <p className="text-black mb-1 font-all-Text px-2">
+              Already have an account? <NavLink to="/" className="hover:font-semibold   text-blue-600">Login</NavLink>
             </p>
           </div>
         </motion.div>
@@ -138,5 +138,6 @@ function Signup() {
     </div>
   );
 }
+
 
 export default Signup;
