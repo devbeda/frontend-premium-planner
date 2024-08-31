@@ -50,26 +50,26 @@ function ShowPlan({ details }) {
       <div className=" w-full flex justify-center items-center  pb-5 font-semibold ">
         <table className="w-[70%] px-3 py-2 text-sm sm:text-base border-black border-2 text-center">
           <tr>
-            <th className="bg-Lic-Blue text-white border-black border-2">
+            <th className="bg-Lic-Blue text-white font-SideHeading-Text border-black border-2">
               Fullname
             </th>
-            <td className="bg-Lic-Yellow  border-black border-2">
+            <td className="bg-Lic-Yellow font-all-Text font-medium  border-black border-2">
               {details.fullName}
             </td>
           </tr>
           <tr>
-            <th className="bg-Lic-Blue text-white border-black border-2">
+            <th className="bg-Lic-Blue text-white font-SideHeading-Text border-black border-2">
               Age
             </th>
-            <td className="bg-Lic-Yellow  border-black border-2">
+            <td className="bg-Lic-Yellow font-all-Text font-medium border-black border-2">
               {details.age}
             </td>
           </tr>
           <tr>
-            <th className="bg-Lic-Blue text-white border-black border-2">
+            <th className="bg-Lic-Blue font-SideHeading-Text text-white border-black border-2">
               Targeting Price
             </th>
-            <td className="bg-Lic-Yellow  border-black border-2">
+            <td className="bg-Lic-Yellow font-all-Text font-medium border-black border-2">
               {details.targetingPrice}
             </td>
           </tr>
@@ -78,18 +78,18 @@ function ShowPlan({ details }) {
       <div className="flex justify-center items-center mb-4">
         <table className="w-[70%] text-sm sm:text-base text-center border-black border-2">
           <tr className="border-black border-2 bg-Lic-Blue text-white">
-            <th className="border-black border-2">Quatarly</th>
-            <th className="border-black border-2">Half Yearly</th>
-            <th className="border-black border-2">Yearly</th>
+            <th className="border-black border-2 font-SideHeading-Text">Quatarly</th>
+            <th className="border-black border-2 font-SideHeading-Text">Half Yearly</th>
+            <th className="border-black border-2 font-SideHeading-Text">Yearly</th>
           </tr>
           <tr className="border-black border-2  bg-Lic-Yellow ">
-            <td className="border-black border-2">
+            <td className="border-black border-2 font-all-Text">
               {details.clientPayPerYear / 4}
             </td>
-            <td className="border-black border-2">
+            <td className="border-black border-2 font-all-Text">
               {details.clientPayPerYear / 2}
             </td>
-            <td className="border-black border-2">
+            <td className="border-black border-2 font-all-Text">
               {details.clientPayPerYear}
             </td>
           </tr>
@@ -97,7 +97,7 @@ function ShowPlan({ details }) {
       </div>
       <div className="w-full h-auto flex justify-center items-center ">
         <table className="text-sm sm:text-base w-[90%] md:w-[60%] border-black border-2 text-center">
-          <thead className="border-black border-2 bg-Lic-Blue text-white">
+          <thead className="border-black border-2 font-SideHeading-Text bg-Lic-Blue text-white">
             <tr>
               <th className="border-black border-2 px-2">Year</th>
               <th className="border-black border-2 px-2">Age</th>
@@ -110,7 +110,7 @@ function ShowPlan({ details }) {
               <th className="border-black border-2 px-2">Return</th>
             </tr>
           </thead>
-          <tbody className="bg-Lic-Yellow">
+          <tbody className="bg-Lic-Yellow font-all-Text">
             {clientRows}
             {companyRows}
             <tr className="text-white bg-Lic-Blue">
@@ -129,7 +129,7 @@ function ShowPlan({ details }) {
           </tbody>
         </table>
       </div>
-      <div className="text-center sm:text-2xl px-4 my-4 ">
+      <div className="text-center sm:text-2xl px-4 my-4 font-all-Text">
         <p>
           Save Rs.{" "}
           <span className="text-green-500 font-semibold">
