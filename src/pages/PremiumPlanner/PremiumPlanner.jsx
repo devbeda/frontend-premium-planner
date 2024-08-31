@@ -64,16 +64,16 @@ function PremiumPlanner() {
         >
           <div className=" w-[70vw] h-auto md:w-1/2 md:h-3/4 outline-none outline-Lic-Blue rounded-lg px-7 py-3">
             <div>
-              <h1 className="text-2xl md:text-6xl text-center text-yellow-400 font-bold">
+              <h1 className="text-2xl md:text-6xl font-Heading-Text text-center text-yellow-400 font-bold">
                 Premium Planner
               </h1>
-              <p className="text-sm mb-2 md:text-xl text-center text-yellow-300">
+              <p className="text-sm mb-2 md:text-xl font-button-Text text-center text-yellow-300">
                 create a premium for your premium client
               </p>
             </div>
             <div className="w-full h-[0.5px] sm:h-[1px] bg-Lic-Blue"></div>
             <div className="mt-5">
-              {error && <p className="text-red-500">{error}</p>}
+              {error && <p className="font-button-Text text-red-500">{error}</p>}
 
               <form
                 onSubmit={handleSubmit(saveClient)}
@@ -81,57 +81,57 @@ function PremiumPlanner() {
               >
                 <div className="mb-4">
                   <div className=" flex gap-3 items-center  ">
-                    <label className="text-[12px]  sm:text-base  font-medium text-gray-700">
+                    <label className="text-[12px] font-SideHeading-Text  sm:text-base  font-medium text-gray-700">
                       Full Name:
                     </label>
                     <input
                       type="text"
-                      className="w-40 sm:w-60 h-6 sm:h-9 px-2 py-1 text-sm font-semibold  mt-1 outline-none outline-Lic-Blue  sm:text-sm  rounded-3xl"
+                      className="w-40 sm:w-60 h-6 font-all-Text sm:h-9 px-2 py-1 text-sm   mt-1 outline-none outline-Lic-Blue  sm:text-sm  rounded-3xl"
                       {...register("fullName", { required: true })}
                     />
                   </div>
                   {errors.fullName && (
-                    <span className="text-[12px] text-red-500 sm:text-base">
+                    <span className="text-[12px] font-button-Text text-red-500 sm:text-base">
                       Enter your Full Name
                     </span>
                   )}
                 </div>
                 <div className="mb-4">
                   <div className="  flex gap-3 items-center ">
-                    <label className=" text-[12px]   sm:text-base font-medium text-gray-700">
+                    <label className=" text-[12px] font-SideHeading-Text  sm:text-base font-medium text-gray-700">
                       Age:
                     </label>
                     <input
                       type="number"
-                      className="text-sm w-16 sm:w-16 h-6 sm:h-9 px-2  font-semibold mt-1 outline-none outline-Lic-Blue   sm:text-sm  rounded-3xl"
+                      className="text-sm w-16 font-all-Text sm:w-16 h-6 sm:h-9 px-2  mt-1 outline-none outline-Lic-Blue   sm:text-sm  rounded-3xl"
                       {...register("age", { required: true })}
                     />
                   </div>
                   {errors.age && (
-                    <span className="text-[12px] text-red-500 sm:text-base">
+                    <span className="text-[12px] font-button-Text text-red-500 sm:text-base">
                       Enter your age
                     </span>
                   )}
                 </div>
                 <div className="mb-4 ">
                   <div className="  flex gap-3 items-center ">
-                    <label className="block text-[12px]  sm:text-base font-medium text-gray-700">
+                    <label className="block text-[12px] font-SideHeading-Text  sm:text-base font-medium text-gray-700">
                       Targeting Price:
                     </label>
                     <input
                       type="number"
-                      className="w-32 sm:w-60 h-6 text-sm  sm:h-9 px-2 py-1 font-semibold mt-1 outline-none outline-Lic-Blue  sm:text-sm  rounded-3xl"
+                      className="w-32 sm:w-60 font-all-Text h-6 text-sm  sm:h-9 px-2 py-1 mt-1 outline-none outline-Lic-Blue  sm:text-sm  rounded-3xl"
                       {...register("targetingPrice", { required: true })}
                     />
                   </div>
                   {errors.targetingPrice && (
-                    <span className="text-[12px]  text-red-500 sm:text-base">
+                    <span className="text-[12px] font-button-Text text-red-500 sm:text-base">
                       Set your Targeting Price
                     </span>
                   )}
                 </div>
                 <div className="mb-4 flex gap-3 items-center ">
-                  <label className=" text-[12px]  sm:text-base font-medium text-gray-700">
+                  <label className=" text-[12px] font-SideHeading-Text  sm:text-base font-medium text-gray-700">
                     Premium Active:
                   </label>
                   <div className=" px-2 py-1 font-semibold flex items-center gap-1">
@@ -141,13 +141,13 @@ function PremiumPlanner() {
                       className="mt-1 accent-blue-500 scale-100 sm:scale-110 cursor-pointer "
                       {...register("isActive")}
                     />
-                    <p className="text-[12px]  sm:text-base">Yes</p>
+                    <p className="text-[12px] font-all-Text font-medium  sm:text-base">Yes</p>
                   </div>
                 </div>
                 <div className="flex flex-col gap-2">
                   <Link
                     to={"/dashboard"}
-                    className="w-full text-center px-6 py-3 text-sm font-medium hover:text-white bg-gray-300 rounded-3xl focus:outline-none text-[#00417c] active:bg-Lic-Blue hover:bg-yellow-500"
+                    className="w-full font-button-Text text-center px-6 py-3 text-sm font-medium hover:text-white bg-gray-300 rounded-3xl focus:outline-none text-[#00417c] active:bg-Lic-Blue hover:bg-yellow-500"
                   >
                     Back
                   </Link>
@@ -170,7 +170,7 @@ function PremiumPlanner() {
               <Link
                 to={"/premiumplanner"}
                 onClick={() => setClientDetails(null)}
-                className="w-full text-center px-6 py-3 text-sm font-medium hover:text-white bg-gray-300 rounded-3xl focus:outline-none text-[#00417c] active:bg-Lic-Blue hover:bg-yellow-500"
+                className="w-full text-center font-button-Text px-6 py-3 text-sm font-medium hover:text-white bg-gray-300 rounded-3xl focus:outline-none text-[#00417c] active:bg-Lic-Blue hover:bg-yellow-500"
               >
                 Back
               </Link>
